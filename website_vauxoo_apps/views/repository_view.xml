@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
+<odoo>
     <data>
 
         <!-- Menus-->        
-        <menuitem id="menu_main_apps" name="Apps"/>
+        <menuitem id="menu_main_apps" name="App Management"/>
         <menuitem id="menu_apps" name="Apps" parent="menu_main_apps"/>
 
         <!-- Repository List--> 
@@ -36,12 +36,13 @@
 			<field name="arch" type="xml">
                 <form string="Repository">
 	                <header>
+						<button name="sync_repository" groups="base.group_no_one" string="Sync Repository Information" type="object"/>
+						<button name="get_module_list" string="Sync Modules" type="object"/>
 	                	<field widget="statusbar" name="state" clickable="True"/>
 	                </header>
 					<sheet>
                         <div class="oe_right oe_button_box" name="buttons">
-                        	<button name="sync_repository" groups="base.group_no_one" class="oe_stat_button" icon="fa-pencil-square-o" string="Sync Repository Information" type="object"/>
-                        	<button name="get_module_list" class="oe_stat_button" icon="fa-cloud-download" string="Sync Modules" type="object"/>
+
                         </div>
 						<div  class="oe_title oe_left">
 							<label for="name"/>
@@ -213,4 +214,4 @@
 		</record> 
         <menuitem id="menu_apps_list" sequence="20" name="Apps" parent="menu_apps" action="action_apps_list"/>
     </data>
-</openerp>
+</odoo>

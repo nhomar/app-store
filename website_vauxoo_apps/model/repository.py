@@ -72,33 +72,33 @@ class Repository(models.Model):
     _order = "name desc, id desc"
     _description = "Repository to pull modules from"
 
-    name = fields.Char(string='Repository Name', index=True,
+    name = fields.Char(index=True,
                        readonly=True, states={'draft': [('readonly', False)]},
                        help="Use something like: vauxoo/addons-vauxoo, we "
                        "will get versions from branch names")
-    local_path = fields.Char(string='Local Path', index=True,
+    local_path = fields.Char(index=True,
                              readonly=True, states={'draft': [('readonly',
                                                                False)]},
                              help="Local path where the code was downloaded.")
-    git_description = fields.Char(string='Github Description', index=True,
+    git_description = fields.Char(index=True,
                                   readonly=True, states={'draft': [('readonly',
                                                                     False)]},
                                   help="Github description")
-    url = fields.Char(string='Link', index=True,
+    url = fields.Char(index=True,
                       readonly=True,
                       help="Connect to your repository")
-    sha = fields.Char(string='Repository SHA', index=True,
+    sha = fields.Char(index=True,
                       readonly=True, states={'draft': [('readonly', False)]},
                       help="Last sha synced ")
-    clone_url = fields.Char(string='Clone URL', index=True,
+    clone_url = fields.Char(index=True,
                             readonly=True, states={'draft': [('readonly',
                                                               False)]},
                             help="URL to clone this repository")
-    ssh_url = fields.Char(string='ssh url', index=True,
+    ssh_url = fields.Char(index=True,
                           readonly=True, states={'draft': [('readonly',
                                                             False)]},
                           help="Url to clone with ssh")
-    addons = fields.Char(string='Relative folder', index=True,
+    addons = fields.Char(index=True,
                          readonly=True,
                          states={'draft': [('readonly', False)]},
                          help="If odoo modules are not on root path "
@@ -107,7 +107,7 @@ class Repository(models.Model):
 
     module_ids = fields.One2many('repository.module', 'repository_id',
                                  string='Modules', help='Modules Imported')
-    version = fields.Char(string='Version',
+    version = fields.Char(
                           change_default=True, required=True,
                           readonly=True, states={'draft': [('readonly',
                                                             False)]},
@@ -115,28 +115,26 @@ class Repository(models.Model):
                           default='8.0',
                           help="A version is a branch on this "
                           "repository.")
-    user_id = fields.Many2one('res.users', string='User',
+    user_id = fields.Many2one('res.users',
                               change_default=True, required=True,
                               readonly=True, states={'draft': [('readonly',
                                                                 False)]},
                               track_visibility='always',
                               help='User with which github credentials '
                               'will be used from')
-    last_json_answer = fields.Text(string='Full answer',
-                                   readonly=True,
+    last_json_answer = fields.Text(readonly=True,
                                    help="All the json in case you "
                                    "need any info")
 
     state = fields.Selection([('draft', 'Draft'),
                               ('open', 'Open'),
                               ('cancel', 'Cancelled')],
-                             string='Status',
                              index=True,
                              readonly=True,
                              default='draft',)
 
     @api.multi
-    def _log_event(self, name='Open Invoice'):
+    def _log_event(self):
         # TODO: implement messages system
         return True
 
@@ -303,25 +301,25 @@ class Repository(models.Model):
                     "Getting the folder for module %s", mod_info)
                 des_file = os.path.join(mod_info, '__openerp__.py')
                 _logger.info("Reading %s", des_file)
-                if os.path.isfile(des_file):
-                    if not module.startswith('.') or not \
-                            module.startswith('_'):
-                        descriptor = self.get_descriptor(des_file, module)
-                        description = descriptor.get('description')
-                        app = descriptor.get('application')
-                        main_image = descriptor.get('main_image')
-                        b64image = main_image and base64.encodestring(
-                            main_image) or False
-                        mod_dict = {'name': descriptor.get('name'),
-                                    'technical_name': module,
-                                    'version': descriptor.get('version'),
-                                    'summary': descriptor.get('summary'),
-                                    'description': description,
-                                    'page': descriptor.get('page'),
-                                    'application': app,
-                                    'image': b64image,
-                                    }
-                        modules.append(mod_dict)
+                if os.path.isfile(des_file) and \
+                        (not module.startswith('.') or \
+                        not module.startswith('_')):
+                    descriptor = self.get_descriptor(des_file, module)
+                    description = descriptor.get('description')
+                    app = descriptor.get('application')
+                    main_image = descriptor.get('main_image')
+                    b64image = main_image and base64.encodestring(
+                        main_image) or False
+                    mod_dict = {'name': descriptor.get('name'),
+                                'technical_name': module,
+                                'version': descriptor.get('version'),
+                                'summary': descriptor.get('summary'),
+                                'description': description,
+                                'page': descriptor.get('page'),
+                                'application': app,
+                                'image': b64image,
+                                }
+                    modules.append(mod_dict)
         return modules
 
     @api.multi
@@ -352,8 +350,8 @@ class Repository(models.Model):
                 prod = self.get_product_id(mo)
                 mo.product_id = prod.id
                 url_img = '/appres/%s' % (mo.id)
-                mo.product_id.website_description = self.clean_page(
-                    url_img, page)
+                mo.product_id.website_description = self.clean_page(url_img,
+                                                                    page)
             else:
                 module_exist.write(module)
                 prod = self.get_product_id(module_exist)
@@ -420,8 +418,7 @@ class RepositoryModule(models.Model):
                                     ondelete='cascade',
                                     help="Repository which this "
                                     "module is developed in")
-    description = fields.Text(string='Module Description', index=True,
-                              readonly=True,
+    description = fields.Text(readonly=True,
                               help="Description on Module from the descriptor "
                               "file and/or README.md")
     website_description = fields.Html(string='Page',
