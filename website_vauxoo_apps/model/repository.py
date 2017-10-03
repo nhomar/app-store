@@ -389,7 +389,8 @@ class RepositoryModule(models.Model):
                        readonly=True,
                        help="Use something like: vauxoo/addons-vauxoo, we "
                        "will get versions from branch names")
-    image = fields.Binary(string='Main Image',
+    product_id = fields.Many2one('product.template')
+    image_medium = fields.Binary(string='Main Image',
                           related='product_id.image_medium')
     local_path = fields.Char(string='Local Path',
                              related='repository_id.local_path')
@@ -412,13 +413,6 @@ class RepositoryModule(models.Model):
     application = fields.Boolean(string='Application',
                                  readonly=True,
                                  help="This module is an application")
-    product_id = fields.Many2one('product.template',
-                                 string='Product',
-                                 index=True,
-                                 readonly=True,
-                                 ondelete='cascade',
-                                 help="Product to use to sale trhought "
-                                 "the e-commerce.")
     repository_id = fields.Many2one('repository.repository',
                                     string='Repository',
                                     index=True,

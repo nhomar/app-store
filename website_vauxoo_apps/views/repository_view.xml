@@ -126,7 +126,8 @@
 	                		</group>
                 		</group>
                 		<group cols="6" string="Image">
-		                	<field name="image" widget="image" nolabel="1"/>
+		                	<field name="image_medium" widget="image"
+								   nolabel="1"/>
                 		</group>
                 		<group cols="6" string="Description">
 		                	<field name="description" nolabel="1"/>
@@ -168,7 +169,8 @@
 	                		</group>
                 		</group>
                 		<group cols="6" string="Image">
-		                	<field name="image" widget="image" nolabel="1"/>
+		                	<field name="image_medium" widget="image"
+								   nolabel="1"/>
                 		</group>
                 		<group cols="6" string="Decsription">
 		                	<field name="description" nolabel="1"/>

@@ -2,14 +2,17 @@
 <openerp>
     <data>
 	    <!-- Groups-->
+		<record id="apps" model="ir.module.category">
+			<field name="name">Apps</field>
+		</record>
 		<record id="group_apps_manager" model="res.groups">
 			<field name="name">Apps Manager</field>
-			<field name="category_id" search="[('name', '=', 'Vauxoo Website')]"/>
+			<field name="category_id" ref="apps"/>
 			<field name="users" eval="[(4, ref('base.user_root'))]"/>
 		</record>
 		<record id="group_apps_user" model="res.groups">
 			<field name="name">Apps User</field>
-			<field name="category_id" search="[('name', '=', 'Vauxoo Website')]"/>
+			<field name="category_id" ref="apps"/>
 		</record> 
     </data>
 </openerp>

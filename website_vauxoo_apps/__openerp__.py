@@ -7,11 +7,12 @@
 List of Vauxoo apps to show in website. A view per official app.
     """,
     'author': 'Vauxoo',
-    'license': 'AGPL-3',
+    'license': 'LGPL-3',
     'depends': [
-        'website_variants_extra',  # <- In order to have available the variants
-        'document',  # <- need manage attachments to deliver doc per module
-        'product_attr_description',  # <- Necesary to pre-load descriptions
+        'document',
+        'mail',
+        'product',
+        'website_sale',
     ],
     'demo': [
     ],
