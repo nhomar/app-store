@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="product_category_apps" model="product.category">
+            <field name="name">Vauxoo Apps</field>
+        </record>
+        <record id="product_category_applications" model="product.category">
+            <field name="parent_id" ref="product_category_apps"/>
+            <field name="name">Applications</field>
+        </record>
+        <record id="product_public_category_apps" model="product.public.category">
+            <field name="name">Vauxoo Apps</field>
+        </record>
+        <record id="product_public_category_applications" model="product.public.category">
+            <field name="parent_id" ref="product_public_category_apps"/>
+            <field name="name">Applications</field>
+        </record>
+        <!-- Versions -->
+        <record id="attr_version" model="product.attribute">
+            <field name="name">Version</field>
+        </record>
+        <record id="v70" model="product.attribute.value">
+            <field name="name">7.0</field>
+            <field name="description">Supported Odoo Version: 7.0</field>
+            <field name="attribute_id" ref="attr_version"/>
+        </record>
+        <record id="v80" model="product.attribute.value">
+            <field name="name">8.0</field>
+            <field name="description">Supported Odoo Version: 8.0</field>
+            <field name="attribute_id" ref="attr_version"/>
+        </record>
+        <!-- Levels -->
+        <record id="attr_level" model="product.attribute">
+            <field name="name">Service Level</field>
+        </record>
+        <record id="level_basic" model="product.attribute.value">
+            <field name="name">Basic</field>
+            <field name="description">Automatic download of module + dependencies, access to source code, access to documentation.</field>
+            <field name="attribute_id" ref="attr_level"/>
+        </record>
+        <record id="level_advanced" model="product.attribute.value">
+            <field name="name">Advanced</field>
+            <field name="description">Automatic download of module + dependencies, access to source code, access to documentation, Access to training material regarding this module and design material to help you include this module in your process.</field>
+            <field name="attribute_id" ref="attr_level"/>
+        </record>
+        <record id="level_platinium" model="product.attribute.value">
+            <field name="name">Platinium</field>
+            <field name="description">Automatic download of module + dependencies, access to source code, access to documentation, Access to training material regarding this module and design material to help you include this module in your process, access to unlimited support to our consultant team to help you to manage all the information and analyse the possible impact of this module in your enviroment.</field>
+            <field name="attribute_id" ref="attr_level"/>
+        </record>
+    </data>
+</openerp>

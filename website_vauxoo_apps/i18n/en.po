@@ -1,0 +1,577 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_vauxoo_apps
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: page (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-22 16:23+0000\n"
+"PO-Revision-Date: 2015-07-22 16:24+0000\n"
+"Last-Translator: Coward Vassal Vauxoo <coward@vauxoo.com>\n"
+"Language-Team: English (http://www.transifex.com/projects/p/Vauxoo-page-8-0/language/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: website_vauxoo_apps
+#: model:product.attribute.value,name:website_vauxoo_apps.v70
+msgid "7.0"
+msgstr "7.0"
+
+#. module: website_vauxoo_apps
+#: model:product.attribute.value,name:website_vauxoo_apps.v80
+msgid "8.0"
+msgstr "8.0"
+
+#. module: website_vauxoo_apps
+#: model:ir.actions.act_window,help:website_vauxoo_apps.action_repository_list
+msgid ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"\t\t\t\tHere you can set the repository list.\n"
+"\t\t\t\t</p>\n"
+"\t\t\t"
+msgstr "<p class=\"oe_view_nocontent_create\">\n\t\t\t\tHere you can set the repository list.\n\t\t\t\t</p>\n\t\t\t"
+
+#. module: website_vauxoo_apps
+#: model:ir.actions.act_window,help:website_vauxoo_apps.action_apps_list
+msgid ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"\t\t\t\tSet your repository to auto import your apps.\n"
+"\t\t\t\t</p>\n"
+"\t\t\t"
+msgstr "<p class=\"oe_view_nocontent_create\">\n\t\t\t\tSet your repository to auto import your apps.\n\t\t\t\t</p>\n\t\t\t"
+
+#. module: website_vauxoo_apps
+#: help:repository.repository,version:0
+msgid "A version is a branch on this repository."
+msgstr "A version is a branch on this repository."
+
+#. module: website_vauxoo_apps
+#: model:product.attribute.value,name:website_vauxoo_apps.level_advanced
+msgid "Advanced"
+msgstr "Advanced"
+
+#. module: website_vauxoo_apps
+#: help:repository.repository,last_json_answer:0
+msgid "All the json in case you need any info"
+msgstr "All the json in case you need any info"
+
+#. module: website_vauxoo_apps
+#: field:repository.module,application:0
+msgid "Application"
+msgstr "Application"
+
+#. module: website_vauxoo_apps
+#: model:product.category,name:website_vauxoo_apps.product_category_applications
+#: model:product.public.category,name:website_vauxoo_apps.product_public_category_applications
+msgid "Applications"
+msgstr "Applications"
+
+#. module: website_vauxoo_apps
+#: model:ir.ui.menu,name:website_vauxoo_apps.menu_apps
+#: model:ir.ui.menu,name:website_vauxoo_apps.menu_apps_list
+#: model:ir.ui.menu,name:website_vauxoo_apps.menu_main_apps
+#: view:website:website.layout
+msgid "Apps"
+msgstr "Apps"
+
+#. module: website_vauxoo_apps
+#: model:ir.actions.act_window,name:website_vauxoo_apps.action_apps_list
+msgid "Apps List"
+msgstr "Apps List"
+
+#. module: website_vauxoo_apps
+#: model:res.groups,name:website_vauxoo_apps.group_apps_manager
+msgid "Apps Manager"
+msgstr "Apps Manager"
+
+#. module: website_vauxoo_apps
+#: model:ir.actions.act_window,name:website_vauxoo_apps.action_repository_list
+msgid "Apps Repository List"
+msgstr "Apps Repository List"
+
+#. module: website_vauxoo_apps
+#: model:res.groups,name:website_vauxoo_apps.group_apps_user
+msgid "Apps User"
+msgstr "Apps User"
+
+#. module: website_vauxoo_apps
+#: model:product.attribute.value,name:website_vauxoo_apps.level_basic
+msgid "Basic"
+msgstr "Basic"
+
+#. module: website_vauxoo_apps
+#: selection:repository.module,state:0 selection:repository.repository,state:0
+msgid "Cancelled"
+msgstr "Cancelled"
+
+#. module: website_vauxoo_apps
+#: field:repository.repository,clone_url:0
+msgid "Clone URL"
+msgstr "Clone URL"
+
+#. module: website_vauxoo_apps
+#: help:repository.repository,url:0
+msgid "Connect to your repository"
+msgstr "Connect to your repository"
+
+#. module: website_vauxoo_apps
+#: field:repository.module,create_uid:0
+#: field:repository.repository,create_uid:0
+msgid "Created by"
+msgstr "Created by"
+
+#. module: website_vauxoo_apps
+#: field:repository.module,create_date:0
+#: field:repository.repository,create_date:0
+msgid "Created on"
+msgstr "Created on"
+
+#. module: website_vauxoo_apps
+#: help:repository.module,message_last_post:0
+#: help:repository.repository,message_last_post:0
+msgid "Date of the last message posted on the record."
+msgstr "Date of the last message posted on the record."
+
+#. module: website_vauxoo_apps
+#: view:repository.module:website_vauxoo_apps.repository_module_form_view
+msgid "Decsription"
+msgstr "Decsription"
+
+#. module: website_vauxoo_apps
+#: view:repository.module:website_vauxoo_apps.repository_module_form_embed_view
+msgid "Description"
+msgstr "Description"
+
+#. module: website_vauxoo_apps
+#: help:repository.module,description:0
+msgid "Description on Module from the descriptor file and/or README.md"
+msgstr "Description on Module from the descriptor file and/or README.md"
+
+#. module: website_vauxoo_apps
+#: selection:repository.module,state:0 selection:repository.repository,state:0
+msgid "Draft"
+msgstr "Draft"
+
+#. module: website_vauxoo_apps
+#: field:repository.module,message_follower_ids:0
+#: field:repository.repository,message_follower_ids:0
+msgid "Followers"
+msgstr "Followers"
+
+#. module: website_vauxoo_apps
+#: help:res.users,token:0
+msgid ""
+"For Apps store we need the token in order to know the necesary information  "
+"to download your set of apps."
+msgstr "For Apps store we need the token in order to know the necesary information  to download your set of apps."
+
+#. module: website_vauxoo_apps
+#: field:repository.repository,last_json_answer:0
+msgid "Full answer"
+msgstr "Full answer"
+
+#. module: website_vauxoo_apps
+#: view:repository.repository:website_vauxoo_apps.repository_form_view
+msgid "General Information"
+msgstr "General Information"
+
+#. module: website_vauxoo_apps
+#: field:repository.repository,git_description:0
+msgid "Github Description"
+msgstr "Github Description"
+
+#. module: website_vauxoo_apps
+#: help:repository.repository,git_description:0
+msgid "Github description"
+msgstr "Github description"
+
+#. module: website_vauxoo_apps
+#: help:repository.module,message_summary:0
+#: help:repository.repository,message_summary:0
+msgid ""
+"Holds the Chatter summary (number of messages, ...). This summary is "
+"directly in html format in order to be inserted in kanban views."
+msgstr "Holds the Chatter summary (number of messages, ...). This summary is directly in html format in order to be inserted in kanban views."
+
+#. module: website_vauxoo_apps
+#: field:repository.module,id:0 field:repository.repository,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: website_vauxoo_apps
+#: help:repository.module,message_unread:0
+#: help:repository.repository,message_unread:0
+msgid "If checked new messages require your attention."
+msgstr "If checked new messages require your attention."
+
+#. module: website_vauxoo_apps
+#: help:repository.repository,addons:0
+msgid ""
+"If odoo modules are not on root path tell which is the folder to set. Will "
+"get versions from branch names"
+msgstr "If odoo modules are not on root path tell which is the folder to set. Will get versions from branch names"
+
+#. module: website_vauxoo_apps
+#: view:repository.module:website_vauxoo_apps.repository_module_form_embed_view
+#: view:repository.module:website_vauxoo_apps.repository_module_form_view
+msgid "Image"
+msgstr "Image"
+
+#. module: website_vauxoo_apps
+#: field:repository.module,message_is_follower:0
+#: field:repository.repository,message_is_follower:0
+msgid "Is a Follower"
+msgstr "Is a Follower"
+
+#. module: website_vauxoo_apps
+#: field:repository.module,message_last_post:0
+#: field:repository.repository,message_last_post:0
+msgid "Last Message Date"
+msgstr "Last Message Date"
+
+#. module: website_vauxoo_apps
+#: field:repository.module,write_uid:0 field:repository.repository,write_uid:0
+msgid "Last Updated by"
+msgstr "Last Updated by"
+
+#. module: website_vauxoo_apps
+#: field:repository.module,write_date:0
+#: field:repository.repository,write_date:0
+msgid "Last Updated on"
+msgstr "Last Updated on"
+
+#. module: website_vauxoo_apps
+#: help:repository.repository,sha:0
+msgid "Last sha synced "
+msgstr "Last sha synced "
+
+#. module: website_vauxoo_apps
+#: field:repository.repository,url:0
+msgid "Link"
+msgstr "Link"
+
+#. module: website_vauxoo_apps
+#: view:repository.repository:website_vauxoo_apps.repository_form_view
+msgid "Linked Information"
+msgstr "Linked Information"
+
+#. module: website_vauxoo_apps
+#: view:repository.repository:website_vauxoo_apps.repository_form_view
+msgid "Links"
+msgstr "Links"
+
+#. module: website_vauxoo_apps
+#: field:repository.repository,local_path:0
+msgid "Local Path"
+msgstr "Local Path"
+
+#. module: website_vauxoo_apps
+#: help:repository.repository,local_path:0
+msgid "Local path where the code was downloaded."
+msgstr "Local path where the code was downloaded."
+
+#. module: website_vauxoo_apps
+#: field:repository.module,message_ids:0
+#: field:repository.repository,message_ids:0
+msgid "Messages"
+msgstr "Messages"
+
+#. module: website_vauxoo_apps
+#: help:repository.module,message_ids:0
+#: help:repository.repository,message_ids:0
+msgid "Messages and communication history"
+msgstr "Messages and communication history"
+
+#. module: website_vauxoo_apps
+#: field:repository.module,description:0
+msgid "Module Description"
+msgstr "Module Description"
+
+#. module: website_vauxoo_apps
+#: field:repository.module,name:0
+msgid "Module Name"
+msgstr "Module Name"
+
+#. module: website_vauxoo_apps
+#: field:repository.module,version:0
+msgid "Module Version"
+msgstr "Module Version"
+
+#. module: website_vauxoo_apps
+#: model:ir.model,name:website_vauxoo_apps.model_repository_module
+msgid "Module on repository"
+msgstr "Module on repository"
+
+#. module: website_vauxoo_apps
+#: view:repository.module:website_vauxoo_apps.repository_module_form_embed_view
+#: view:repository.module:website_vauxoo_apps.repository_module_form_view
+#: view:repository.module:website_vauxoo_apps.repository_module_tree_view
+#: view:repository.repository:website_vauxoo_apps.repository_form_view
+#: field:repository.repository,module_ids:0
+msgid "Modules"
+msgstr "Modules"
+
+#. module: website_vauxoo_apps
+#: help:repository.repository,module_ids:0
+msgid "Modules Imported"
+msgstr "Modules Imported"
+
+#. module: website_vauxoo_apps
+#: selection:repository.module,state:0 selection:repository.repository,state:0
+msgid "Open"
+msgstr "Open"
+
+#. module: website_vauxoo_apps
+#: field:repository.module,website_description:0
+msgid "Page"
+msgstr "Page"
+
+#. module: website_vauxoo_apps
+#: model:product.attribute.value,name:website_vauxoo_apps.level_platinium
+msgid "Platinium"
+msgstr "Platinium"
+
+#. module: website_vauxoo_apps
+#: field:repository.module,product_id:0
+msgid "Product"
+msgstr "Product"
+
+#. module: website_vauxoo_apps
+#: help:repository.module,product_id:0
+msgid "Product to use to sale trhought the e-commerce."
+msgstr "Product to use to sale trhought the e-commerce."
+
+#. module: website_vauxoo_apps
+#: field:repository.module,published:0
+msgid "Published"
+msgstr "Published"
+
+#. module: website_vauxoo_apps
+#: field:repository.repository,addons:0
+msgid "Relative folder"
+msgstr "Relative folder"
+
+#. module: website_vauxoo_apps
+#: model:ir.ui.menu,name:website_vauxoo_apps.menu_repository_list
+msgid "Repositories"
+msgstr "Repositories"
+
+#. module: website_vauxoo_apps
+#: field:repository.module,repository_id:0
+#: view:repository.repository:website_vauxoo_apps.repository_form_view
+#: view:repository.repository:website_vauxoo_apps.repository_tree_view
+msgid "Repository"
+msgstr "Repository"
+
+#. module: website_vauxoo_apps
+#: field:repository.repository,name:0
+msgid "Repository Name"
+msgstr "Repository Name"
+
+#. module: website_vauxoo_apps
+#: field:repository.repository,sha:0
+msgid "Repository SHA"
+msgstr "Repository SHA"
+
+#. module: website_vauxoo_apps
+#: model:ir.model,name:website_vauxoo_apps.model_repository_repository
+msgid "Repository to pull modules from"
+msgstr "Repository to pull modules from"
+
+#. module: website_vauxoo_apps
+#: help:repository.module,repository_id:0
+msgid "Repository which this module is developed in"
+msgstr "Repository which this module is developed in"
+
+#. module: website_vauxoo_apps
+#: model:product.attribute,name:website_vauxoo_apps.attr_level
+msgid "Service Level"
+msgstr "Service Level"
+
+#. module: website_vauxoo_apps
+#: field:repository.module,state:0 field:repository.repository,state:0
+msgid "Status"
+msgstr "Status"
+
+#. module: website_vauxoo_apps
+#: field:repository.module,message_summary:0 field:repository.module,summary:0
+#: field:repository.repository,message_summary:0
+msgid "Summary"
+msgstr "Summary"
+
+#. module: website_vauxoo_apps
+#: help:repository.module,summary:0
+msgid "Summary on descriptor"
+msgstr "Summary on descriptor"
+
+#. module: website_vauxoo_apps
+#: view:repository.repository:website_vauxoo_apps.repository_form_view
+msgid "Sync Information"
+msgstr "Sync Information"
+
+#. module: website_vauxoo_apps
+#: view:repository.repository:website_vauxoo_apps.repository_form_view
+msgid "Sync Modules"
+msgstr "Sync Modules"
+
+#. module: website_vauxoo_apps
+#: view:repository.repository:website_vauxoo_apps.repository_form_view
+msgid "Sync Repository Information"
+msgstr "Sync Repository Information"
+
+#. module: website_vauxoo_apps
+#: field:repository.module,technical_name:0
+msgid "Technical Name"
+msgstr "Technical Name"
+
+#. module: website_vauxoo_apps
+#: sql_constraint:repository.module:0
+msgid "Technical Name for a module in a repository must be unique!"
+msgstr "Technical Name for a module in a repository must be unique!"
+
+#. module: website_vauxoo_apps
+#: help:repository.module,technical_name:0
+msgid "Technical Name of the module"
+msgstr "Technical Name of the module"
+
+#. module: website_vauxoo_apps
+#: view:website:website_vauxoo_apps.vx_app
+msgid "Test test test"
+msgstr "Test test test"
+
+#. module: website_vauxoo_apps
+#: help:repository.module,application:0
+msgid "This module is an application"
+msgstr "This module is an application"
+
+#. module: website_vauxoo_apps
+#: help:repository.module,published:0
+msgid "This module is published in the website"
+msgstr "This module is published in the website"
+
+#. module: website_vauxoo_apps
+#: field:res.users,token:0
+msgid "Token on Github"
+msgstr "Token on Github"
+
+#. module: website_vauxoo_apps
+#: help:repository.repository,clone_url:0
+msgid "URL to clone this repository"
+msgstr "URL to clone this repository"
+
+#. module: website_vauxoo_apps
+#: field:repository.module,message_unread:0
+#: field:repository.repository,message_unread:0
+msgid "Unread Messages"
+msgstr "Unread Messages"
+
+#. module: website_vauxoo_apps
+#: help:repository.repository,ssh_url:0
+msgid "Url to clone with ssh"
+msgstr "Url to clone with ssh"
+
+#. module: website_vauxoo_apps
+#: help:repository.module,name:0 help:repository.repository,name:0
+msgid ""
+"Use something like: vauxoo/addons-vauxoo, we will get versions from branch "
+"names"
+msgstr "Use something like: vauxoo/addons-vauxoo, we will get versions from branch names"
+
+#. module: website_vauxoo_apps
+#: field:repository.repository,user_id:0
+msgid "User"
+msgstr "User"
+
+#. module: website_vauxoo_apps
+#: help:repository.repository,user_id:0
+msgid "User with which github credentials will be used from"
+msgstr "User with which github credentials will be used from"
+
+#. module: website_vauxoo_apps
+#: model:ir.model,name:website_vauxoo_apps.model_res_users
+msgid "Users"
+msgstr "Users"
+
+#. module: website_vauxoo_apps
+#: model:product.category,name:website_vauxoo_apps.product_category_apps
+#: model:product.public.category,name:website_vauxoo_apps.product_public_category_apps
+msgid "Vauxoo Apps"
+msgstr "Vauxoo Apps"
+
+#. module: website_vauxoo_apps
+#: model:product.attribute,name:website_vauxoo_apps.attr_version
+#: field:repository.repository,version:0
+msgid "Version"
+msgstr "Version"
+
+#. module: website_vauxoo_apps
+#: help:repository.module,version:0
+msgid "Version declared on the module descriptor"
+msgstr "Version declared on the module descriptor"
+
+#. module: website_vauxoo_apps
+#: view:website:website_vauxoo_apps.vx_apps
+msgid "We have an app for every need, search what you are looking for"
+msgstr "We have an app for every need, search what you are looking for"
+
+#. module: website_vauxoo_apps
+#: view:repository.module:website_vauxoo_apps.repository_module_form_embed_view
+#: view:repository.module:website_vauxoo_apps.repository_module_form_view
+msgid "Website Description"
+msgstr "Website Description"
+
+#. module: website_vauxoo_apps
+#: field:repository.module,website_message_ids:0
+#: field:repository.repository,website_message_ids:0
+msgid "Website Messages"
+msgstr "Website Messages"
+
+#. module: website_vauxoo_apps
+#: help:repository.module,website_message_ids:0
+#: help:repository.repository,website_message_ids:0
+msgid "Website communication history"
+msgstr "Website communication history"
+
+#. module: website_vauxoo_apps
+#: help:repository.module,website_description:0
+msgid ""
+"Website description to be used to sell. it is synced with index.html file on"
+" module."
+msgstr "Website description to be used to sell. it is synced with index.html file on module."
+
+#. module: website_vauxoo_apps
+#: view:website:website_vauxoo_apps.vx_apps
+msgid ""
+"Your next step y search, then select, read the doc and buy services to help "
+"you extend/understand what you need."
+msgstr "Your next step y search, then select, read the doc and buy services to help you extend/understand what you need."
+
+#. module: website_vauxoo_apps
+#: view:res.users:website_vauxoo_apps.view_users_form_github
+msgid "github Token for apps"
+msgstr "github Token for apps"
+
+#. module: website_vauxoo_apps
+#: view:res.users:website_vauxoo_apps.view_users_form_simple_modif_github
+msgid "github token for apps"
+msgstr "github token for apps"
+
+#. module: website_vauxoo_apps
+#: view:repository.repository:website_vauxoo_apps.repository_form_view
+msgid "i.e.: addons/ default is '/'"
+msgstr "i.e.: addons/ default is '/'"
+
+#. module: website_vauxoo_apps
+#: view:repository.repository:website_vauxoo_apps.repository_form_view
+msgid "i.e.: vauxoo/odoo-ifrs"
+msgstr "i.e.: vauxoo/odoo-ifrs"
+
+#. module: website_vauxoo_apps
+#: field:repository.repository,ssh_url:0
+msgid "ssh url"
+msgstr "ssh url"

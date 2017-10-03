@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!-- Menus-->        
+        <menuitem id="menu_main_apps" name="Apps"/>
+        <menuitem id="menu_apps" name="Apps" parent="menu_main_apps"/>
+
+        <!-- Repository List--> 
+		<record id="action_repository_list" model="ir.actions.act_window">
+			<field name="name">Apps Repository List</field>
+			<field name="res_model">repository.repository</field>
+			<field name="view_type">form</field>
+			<field name="context">{}</field>
+			<field name="view_mode">tree,form</field>
+			<field name="domain">[]</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">
+				Here you can set the repository list.
+				</p>
+			</field>
+		</record>
+		<record id="repository_tree_view" model="ir.ui.view">
+			<field name="name">repository.tree.view</field>
+			<field name="model">repository.repository</field>
+			<field name="arch" type="xml">
+                <tree string="Repository">
+                	<field name="name"/>
+                	<field name="state"/>
+                </tree>
+			</field>
+		</record> 
+		<record id="repository_form_view" model="ir.ui.view">
+			<field name="name">repository.form.view</field>
+			<field name="model">repository.repository</field>
+			<field name="arch" type="xml">
+                <form string="Repository">
+	                <header>
+	                	<field widget="statusbar" name="state" clickable="True"/>
+	                </header>
+					<sheet>
+                        <div class="oe_right oe_button_box" name="buttons">
+                        	<button name="sync_repository" groups="base.group_no_one" class="oe_stat_button" icon="fa-pencil-square-o" string="Sync Repository Information" type="object"/>
+                        	<button name="get_module_list" class="oe_stat_button" icon="fa-cloud-download" string="Sync Modules" type="object"/>
+                        </div>
+						<div  class="oe_title oe_left">
+							<label for="name"/>
+                        </div>
+                        <h1>
+							<field name="name" placeholder="i.e.: vauxoo/odoo-ifrs"/>
+						</h1>
+						<h2>
+							<field name="git_description" readonly="1"/>
+						</h2>
+						<group>
+							<group cols="3" string="Linked Information">
+								<field name="user_id"/>
+								<field name="addons" placeholder="i.e.: addons/ default is '/'"/>
+							</group>
+							<group cols="3" string="General Information">
+								<field name="version"/>
+								<field name="sha"/>
+							</group>
+						</group>
+						<notebook>
+							<page string="Modules">
+								<field name="module_ids" nolabel="1" form_view_ref="website_vauxoo_apps.repository_module_form_embed_view"/>
+							</page>
+							<page string="Sync Information">
+								<field name="last_json_answer" nolabel="1"/>
+							</page>
+                            <page string="Links">
+                                <group>
+                                    <field name="local_path" readonly="1"/>
+                                    <field name="url" widget="url"/>
+                                    <field name="clone_url" widget="url"/>
+                                    <field name="ssh_url" widget="url"/>
+                                </group>
+                            </page>
+					    </notebook>
+					</sheet>
+	                <div class="oe_chatter">
+	                    <field name="message_follower_ids" widget="mail_followers"/>
+	                    <field name="message_ids" widget="mail_thread"/>
+	                </div>
+				</form>
+			</field>
+		</record> 
+        <menuitem id="menu_repository_list" sequence="10" name="Repositories" parent="menu_apps" action="action_repository_list"/>
+
+        <!-- Apps List--> 
+		<record id="repository_module_tree_view" model="ir.ui.view">
+			<field name="name">repository.module.tree.view</field>
+			<field name="model">repository.module</field>
+			<field name="arch" type="xml">
+                <tree string="Modules">
+                	<field name="name"/>
+                	<field name="technical_name"/>
+                	<field name="version"/>
+                	<field name="published" invisible="1"/>
+                    <button name="unpublish_module" icon="STOCK_CANCEL" type="object" attrs="{'invisible': [('published', '=', False)]}"/>
+                    <button name="publish_module" icon="STOCK_APPLY" type="object" attrs="{'invisible': [('published', '=', True)]}"/>
+                </tree>
+			</field>
+		</record>
+		<record id="repository_module_form_embed_view" model="ir.ui.view">
+			<field name="name">repository.module.form.view</field>
+			<field name="model">repository.module</field>
+			<field name="arch" type="xml">
+                <form string="Modules">
+                	<header>
+		            	<field name="state" widget="statusbar"/>
+                	</header>
+                	<sheet>
+                		<group>
+	                		<group cols="3">
+			                	<field name="name"/>
+			                	<field name="technical_name"/>
+			                	<field name="version"/>
+	                		</group>
+	                		<group cols="3">
+			                	<field name="summary"/>
+							    <field name="application"/>
+			                	<field name="published"/>
+			                	<field name="product_id"/>
+	                		</group>
+                		</group>
+                		<group cols="6" string="Image">
+		                	<field name="image" widget="image" nolabel="1"/>
+                		</group>
+                		<group cols="6" string="Description">
+		                	<field name="description" nolabel="1"/>
+                		</group>
+                		<group cols="6" string="Website Description">
+		                	<field name="website_description" nolabel="1"/>
+                		</group>
+                	</sheet>
+	                <div class="oe_chatter">
+	                    <field name="message_follower_ids" widget="mail_followers"/>
+	                    <field name="message_ids" widget="mail_thread"/>
+	                </div>
+                </form>
+			</field>
+		</record>
+		<record id="repository_module_form_view" model="ir.ui.view">
+			<field name="name">repository.module.form.view</field>
+			<field name="model">repository.module</field>
+			<field name="arch" type="xml">
+                <form string="Modules">
+                	<header>
+		            	<field name="state" widget="statusbar"/>
+                	</header>
+                	<sheet>
+                		<h1>
+			                <field name="repository_id"/>
+                		</h1>
+                		<group>
+	                		<group cols="3">
+			                	<field name="name"/>
+			                	<field name="technical_name"/>
+			                	<field name="version"/>
+	                		</group>
+	                		<group cols="3">
+			                	<field name="summary"/>
+							    <field name="application"/>
+			                	<field name="published"/>
+			                	<field name="product_id"/>
+	                		</group>
+                		</group>
+                		<group cols="6" string="Image">
+		                	<field name="image" widget="image" nolabel="1"/>
+                		</group>
+                		<group cols="6" string="Decsription">
+		                	<field name="description" nolabel="1"/>
+                		</group>
+                		<group cols="6" string="Website Description">
+		                	<field name="website_description" nolabel="1"/>
+                		</group>
+                	</sheet>
+	                <div class="oe_chatter">
+	                    <field name="message_follower_ids" widget="mail_followers"/>
+	                    <field name="message_ids" widget="mail_thread"/>
+	                </div>
+                </form>
+			</field>
+		</record>
+		<record id="action_apps_list" model="ir.actions.act_window">
+			<field name="name">Apps List</field>
+			<field name="res_model">repository.module</field>
+			<field name="view_type">form</field>
+			<field name="context">{}</field>
+			<field name="view_mode">tree,form</field>
+			<field name="domain">[]</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">
+				Set your repository to auto import your apps.
+				</p>
+			</field>
+		</record> 
+		<record id="action_apps_form_ref" model="ir.actions.act_window.view">
+			<field name="view_mode">form</field>
+			<field name="sequence">100</field>
+			<field name="view_id" eval="ref('website_vauxoo_apps.repository_module_form_view')"/>
+			<field name="act_window_id" eval="ref('website_vauxoo_apps.action_apps_list')"/>
+		</record> 
+		<record id="action_apps_tree_ref" model="ir.actions.act_window.view">
+			<field name="view_mode">tree</field>
+			<field name="sequence">50</field>
+			<field name="view_id" eval="ref('website_vauxoo_apps.repository_module_tree_view')"/>
+			<field name="act_window_id" eval="ref('website_vauxoo_apps.action_apps_list')"/>
+		</record> 
+        <menuitem id="menu_apps_list" sequence="20" name="Apps" parent="menu_apps" action="action_apps_list"/>
+    </data>
+</openerp>

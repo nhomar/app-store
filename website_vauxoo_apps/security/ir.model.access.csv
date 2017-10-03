@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_repository,repository.repository,model_repository_repository,group_apps_manager,1,1,1,1
+access_repository_app,repository.module,model_repository_module,group_apps_manager,1,1,1,1
+access_repository_user,repository.repository,model_repository_repository,group_apps_user,1,1,1,1
+access_repository_app_user,repository.module,model_repository_module,group_apps_user,1,1,1,1
+access_repository_module_public,repository.module,model_repository_module,base.group_public,1,0,0,0
+access_repository_module_portal,repository.module,model_repository_module,base.group_portal,1,0,0,0
+access_repository_module_user,repository.module,model_repository_module,base.group_user,1,0,0,0
+access_repository_repository_public,repository.module.public,model_repository_module,base.group_public,1,0,0,0
+access_repository_repository_portal,repository.module.portal,model_repository_repository,base.group_portal,1,0,0,0
+access_repository_repository_public,repository.repository.public,model_repository_repository,base.group_public,1,0,0,0
+access_repository_repository_public,repository.module.public,model_repository_module,,1,0,0,0
+access_repository_repository_repository,repository.repository.public,model_repository_repository,,1,0,0,0

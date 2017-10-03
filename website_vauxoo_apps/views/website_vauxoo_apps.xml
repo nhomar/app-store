@@ -1,0 +1,48 @@
+<openerp>
+    <data>
+        <template id="vx_apps" page="True" name="Apps">
+            <t t-call="website.layout">
+              <div id="wrap">
+                <section class="vx_wrapper_white" style="background: #333;">
+                    <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 mt16" style="color:#FFFFFF;">
+                            <h2>We have an app for every need, search what you are looking for</h2>
+                            <p>Your next step y search, then select, read the doc and buy services to help you extend/understand what you need.</p>
+                        </div>
+                        <div class="col-md-6 mt16">
+                        <img class="img img-responsive shadow mb16" src="/website_vauxoo_apps/static/img/feedback.png"/>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+                <section class="mt16 mb16">
+                  <div class="container">
+                    <t t-set="modules" t-value="env['repository.module'].search([], order='published desc')"/>
+                    <t t-foreach="modules" t-as="module">
+                        <t t-call="website_vauxoo_apps.vx_app"/>
+                    </t>
+                  </div>
+                </section>
+              </div>
+            </t>
+        </template>
+        <template id="vx_app" name="App">
+            <div class="col-md-4">
+              <h4 class="mt16"><t t-esc="module.name"/></h4>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title"><t t-esc="module.technical_name"/></h3>
+                </div>
+                <div class="panel-body"><t t-esc="module.summary"/></div>
+              </div>
+              <p>Test test test</p>
+            </div>
+        </template>
+        <template id="footer_apps" inherit_id="website.footer_default" customize_show="True" name="Automatic Footer">
+            <xpath expr="//ul[@id='products']" position="inside">
+                <li><a href="/page/website_vauxoo_apps.vx_apps">Apps</a></li>
+            </xpath>
+        </template>
+    </data>
+</openerp>
